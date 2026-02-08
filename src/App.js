@@ -1,11 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
 const App = () => {
-return (
-    <div className="App"> <span></span>
-      Simple HTML!ddd
-    </div>  
+  return (
+    <div>
+      <div>One  div</div>
+      <div className="App"> <span></span>
+        <ul>
+          <li>css</li>
+          <li>html</li>
+          <li>js</li>
+          <li>react</li>
+        </ul>
+      </div>
+    </div>
   );
 }
 
