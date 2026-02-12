@@ -1,10 +1,9 @@
 import './App.css';
 
 const App = () => {
-  return (
-    <div>
+  return <div>
       <div>One  div</div>
-      <div className="App"> <span></span>
+      <div className="App">
         <ul>
           <li>css</li>
           <li>html</li>
@@ -13,7 +12,7 @@ const App = () => {
         </ul>
       </div>
     </div>
-  );
+
 }
 
 export default App
