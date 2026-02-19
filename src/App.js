@@ -1,8 +1,10 @@
 import './App.css';
 
+
 const App = () => {
-  return <div>
-      <div>One  div</div>
+  return (
+  <div>
+      <div><Header/></div>
       <div className="App">
         <ul>
           <li>css</li>
@@ -11,8 +13,16 @@ const App = () => {
           <li>react</li>
         </ul>
       </div>
-    </div>
+    </div>);
 
+}
+
+const Header = () => {
+  return (<div>
+    <a>Home</a>
+    <a>News Feed</a>
+    <a>Messeges</a>
+  </div>);
 }
 
 
