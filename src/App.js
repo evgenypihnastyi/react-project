@@ -4,7 +4,7 @@ import './App.css';
 const App = () => {
   return (
   <div>
-      <div><Header/></div>
+    <Header />
       <div className="App">
         <ul>
           <li>css</li>
@@ -19,9 +19,9 @@ const App = () => {
 
 const Header = () => {
   return (<div>
-    <a>Home</a>
-    <a>News Feed</a>
-    <a>Messeges</a>
+    <a href='#s'> Home</a>
+    <a href='#s'> News Feed</a>
+    <a href='#s'>Messeges</a>
   </div>);
 }
 
