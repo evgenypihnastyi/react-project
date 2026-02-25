@@ -1,5 +1,5 @@
 import openGoogle from "./google.jsx";
-import { openYandex } from "./yandex";
+import { openYandex } from "./yandex.jsx";
 
 export let openAllMaps = () => {
     openGoogle();
