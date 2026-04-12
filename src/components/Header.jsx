@@ -1,9 +1,11 @@
 import React from "react";
+import s from "./Header.module.css";
+import logo from "./../images/logo.png"
 
 const Header = () => {
-    return <header className='header'>
-        <img src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwNDktMjIucG5n.png" />
+    return <header className={s.header}>
+        <img src={logo} />
     </header>
 }
-
+console.log("My reference= " + logo)
 export default Header;
