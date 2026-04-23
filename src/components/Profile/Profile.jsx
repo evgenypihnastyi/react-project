@@ -1,8 +1,8 @@
 import React from "react";
 import s from "./Profile.module.css";
-import MyPosts from "./MyPosts/MyPosts";  
+import MyPosts from "./MyPosts/MyPosts";
 const Profile = () => {
-  return <div className={s.content}>
+  return (<div>
     <div>
       <div>
         <img src="https://interier-foto.ru/wp-content/uploads/panoramnoe-foto-6390.jpg" />
@@ -13,5 +13,6 @@ const Profile = () => {
     </div>
     <MyPosts />
   </div>
+  )
 }
 export default Profile;

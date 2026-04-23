@@ -6,14 +6,14 @@ const MyPosts = () => {
     <div>
       My post
       <div>
-        <textarea>  </textarea>
+        <textarea/>
         <button>Add post</button>
         <button>Remove</button>
 
       </div>
       <div className={s.posts}>
-        <Post messeges="Hi, how are you" />
-        <Post messeges="It's my first post" />
+        <Post message="Hi, how are you" />
+        <Post message="It's my first post" />
       </div>
     </div>
   )
