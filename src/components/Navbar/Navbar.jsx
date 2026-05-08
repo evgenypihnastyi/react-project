@@ -3,8 +3,8 @@ import s from './Navbar.module.css';
 
 const Navbar = () => {
     return <nav className={s.nav}>
-        <div className={s.item}>
-          <NavLink to="/profile" activeClassName={s.activeLink}>Profile</NavLink>
+        <div className={`${s.item} ${s.active}`}>
+          <NavLink to="/profile" className={s.active}>Profile</NavLink>
         </div>
         <div className={`${s.item} ${s.active}`}> 
           <NavLink to="/dialogs">Messages</NavLink>
