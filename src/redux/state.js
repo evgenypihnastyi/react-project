@@ -1,10 +1,12 @@
+import { rerenderEntireTree } from "../render";
+
 let state = {
     ProfilePage: {
         post: [
-            { id: 1, messeage: "Hi, how are yuo?", likesCount: 12 },
-            { id: 2, messeage: "It\'s my first post", likesCount: 11 },
-            { id: 3, messeage: "Blabla", likesCount: 11 },
-            { id: 4, messeage: "Dada", likesCount: 11 },
+            { id: 1, message: "Hi, how are yuo?", likesCount: 12 },
+            { id: 2, message: "It\'s my first post", likesCount: 11 },
+            { id: 3, message: "Blabla", likesCount: 11 },
+            { id: 4, message: "Dada", likesCount: 11 },
         ],
 
     },
@@ -38,6 +40,7 @@ export let addPost = (postMessage) => {
    };
 
    state.ProfilePage.post.push(newPost);
+   rerenderEntireTree(state);
 }
 
 export default state;
