@@ -2,14 +2,16 @@ import { rerenderEntireTree } from "../render";
 
 let state = {
     ProfilePage: {
-        post: [
+        posts: [
             { id: 1, message: "Hi, how are yuo?", likesCount: 12 },
             { id: 2, message: "It\'s my first post", likesCount: 11 },
             { id: 3, message: "Blabla", likesCount: 11 },
             { id: 4, message: "Dada", likesCount: 11 },
         ],
+        newPostText: "it-kamasutra.com"
 
     },
+
     DialogsPage: {
         dialogs: [
             { id: 1, name: "Dimych" },
@@ -20,27 +22,35 @@ let state = {
             { id: 6, name: "Valera" }
         ],
         messages: [
-            { id: 1, message: "Hi" },
-            { id: 2, message: "How is your it-kamasutra?" },
+            { id: 1, message: "Hi", likesCount: 12 },
+            { id: 2, message: "How is your it-kamasutra?", likesCount: 11 },
             { id: 3, message: "Yo" },
             { id: 4, message: "Yo" },
             { id: 5, message: "Yo" },
-            { id: 6, message: "Yo" }
+            { id: 6, message: "Yo", likesCount: 20 }
         ]
     },
-    
-sidebar: {}
+
+    sidebar: {}
 }
 
-export let addPost = (postMessage) => {
-   let newPost = {
-    id: 5,
-    message: postMessage,
-    likesCount: 0
-   };
+window.state = state;
 
-   state.ProfilePage.post.push(newPost);
-   rerenderEntireTree(state);
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        message: state.ProfilePage.newPostText,
+        likesCount: 0
+    };
+
+    state.ProfilePage.posts.push(newPost);
+    state.ProfilePage.newPostText = "";
+    rerenderEntireTree(state);
+}
+
+export let updateNewPostText = (newText) => {
+    state.ProfilePage.newPostText = newText;
+    rerenderEntireTree(state);
 }
 
 export default state;

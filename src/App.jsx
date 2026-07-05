@@ -3,27 +3,25 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
-import { Routes, Route } from 'react-router-dom';
-import { addPost } from './redux/state';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-
-
- 
 
 const App = (props) => {
 
   return (
-    <div className="app-wrapper">
-      <Header />
-      <Navbar />
-      <div className="app-wrapper-content">
-        <Routes>
-          <Route path="/dialogs/*" Component={  () => <Dialogs  state={props.state.DialogsPage} /> } />      
-          <Route path="/profile" Component={ () => <Profile   state={props.state.ProfilePage} addPost={props.addPost} /> } />
-        </Routes>
+    <BrowserRouter>
+      <div className="app-wrapper">
+        <Header />
+        <Navbar />
+        <div className="app-wrapper-content">
+          <Routes>
+            <Route path="/dialogs/*" Component={() => <Dialogs state={props.state.DialogsPage} />} />
+            <Route path="/profile" Component={() => <Profile profilePage={props.state.ProfilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText} />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
