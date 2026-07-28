@@ -1,0 +1,80 @@
+<script>
+
+    let man = {
+        name: "Dmitriy",
+        age: 31,
+        sayName() {
+            alert(this.name);
+        }
+
+
+    }
+
+
+    console.log(man.age)
+    console.log(man.name)
+    man.sayName();
+
+    let page = {
+        title: "samuraiJS",
+        content: "",
+        render() {
+            document.write(this.content);
+        }
+    }
+
+    page.content = "<div>Content about React JS</div>";
+    page.render();
+
+
+    let page2 = {
+        title: "samuraiJS",
+        _content: "",
+        setContent(content) {
+        },
+        getContent() {
+            return this._content;
+        },
+        render: function () {
+            document.write(this._content);
+        }
+    }
+
+
+    let stor = {
+        _subscriber() {
+            console.log( "no subscribers (ebservers)" )
+        },
+        _state: {
+            firsName: "it-incubator.by",
+            lastName: "it-kamasutra.com"
+        },
+        getState() {
+            return this._state;
+        },
+        subscribe(observer) {
+        },
+        setFirstName(value) {
+            this._state.firstName = value;
+            this._subscriber();
+        }
+    }
+
+
+    let state = stor.getState();
+    stor.setFirstName("samuraiJS.com")
+    state = stor.getState();
+
+
+    stor.subscribe(
+        () => {
+            let state = stor.getState();
+            renderPage(state);
+        }
+    );
+
+    stor.setFirstName("youtube.com");
+
+
+</script>
+<div>Hello, World!</div>
