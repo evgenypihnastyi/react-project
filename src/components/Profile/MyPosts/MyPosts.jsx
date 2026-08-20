@@ -16,7 +16,7 @@ const MyPosts = (props) => {
 
   let onPostChange = (event) => {
     let text = event.target.value;
-    console.log("MyPosts " + text);
+
     props.updateNewPostText(text);
   }
 
@@ -40,4 +40,4 @@ const MyPosts = (props) => {
   )
 }
 
-export default MyPosts;
+export default MyPosts
